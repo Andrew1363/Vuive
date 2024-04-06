@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tìm Kiếm Đồ Ăn Ngon</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer type="module" src="./js/index.js"></script>
   </head>
   <body>
     <header>
@@ -14,15 +15,15 @@
 
     <main>
       <section class="tim-kiem">
-        <form action="#">
-          <input type="text" placeholder="Tìm kiếm món ăn" />
+        <form class="form">
+          <input type="text" placeholder="Tìm kiếm món ăn" class="search_bar" />
           <select name="loai-mon-an">
             <option value="tat-ca">Tất cả</option>
             <option value="mon-khai-vi">Món khai vị</option>
             <option value="mon-chinh">Món chính</option>
             <option value="mon-trang-mieng">Món tráng miệng</option>
           </select>
-          <button type="submit">Tìm kiếm</button>
+          <button type="submit" class="btnSearch">Tìm kiếm</button>
         </form>
       </section>
 
@@ -39,28 +40,24 @@
 
       <section class="mon-an">
         <h2>Món ăn mới nhất</h2>
-        <ul>
-          <li>
-            <a href="#">
-              <img src="images/1.jpg" alt="Món X" />
-              <h3>Món X</h3>
-              <p>Mô tả ngắn về món X</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/2.jpg" alt="Món Y" />
-              <h3>Món Y</h3>
-              <p>Mô tả ngắn về món Y</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/3.jpg" alt="Món Z" />
-              <h3>Món Z</h3>
-              <p>Mô tả ngắn về món Z</p>
-            </a>
-          </li>
+        <ul class="recipe__list">
+          <!-- <li class="recipe__details">
+            <div>
+              <img
+                src="https://clipart-library.com/data_images/6103.png"
+                alt=""
+              />
+            </div>
+            <div class="recipe__infor">
+              <div>
+                <h3>${data.name}</h3>
+                <p>${data.description}</p>
+              </div>
+              <a href="#">View Detail</a>
+            </div>
+          </li> -->
+
+          <li class="start-list"></li>
         </ul>
       </section>
     </main>
