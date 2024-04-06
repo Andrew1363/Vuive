@@ -1,0 +1,112 @@
+body {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: #161414;
+  background-color: #f4e9ce;
+}
+
+header {
+  background-color: #ff6b15;
+  color: #8a1207;
+  padding: 20px;
+  text-align: left;
+  border-style: solid;
+  background-image: url("/img/food.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 16px;
+}
+
+main {
+  padding: 20px;
+  background-color: #f4e9ce;
+}
+
+.tim-kiem {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f4e9ce;
+}
+
+.tim-kiem form {
+  display: flex;
+  align-items: center;
+}
+
+.tim-kiem form input {
+  width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.tim-kiem form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.tim-kiem form button {
+  padding: 10px;
+  background-color: #ff6600;
+  color: #fff;
+  border: 1px solid #ff6600;
+}
+
+.danh-muc {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f4e9ce;
+}
+
+.danh-muc ul {
+  list-style: none;
+  padding: 0;
+}
+
+.danh-muc ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.danh-muc ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.mon-an {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f4e9ce;
+}
+
+.mon-an ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mon-an ul li {
+  margin-bottom: 10px;
+}
+
+.mon-an ul li a {
+  text-decoration: none;
+}
+
+.mon-an ul li a img {
+  width: 100px;
+  height: 100px;
+}
+
+.mon-an ul li a h3 {
+  font-size: medium;
+}
+footer p {
+  text-align: center;
+}
