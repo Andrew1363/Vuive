@@ -9,7 +9,6 @@ export const options = {
 };
 
 const searchBar = document.querySelector(".search_bar");
-const searchButton = document.querySelector(".btnSearch");
 const recipeList = document.querySelector(".recipe__list");
 const form = document.querySelector(".form");
 
@@ -22,9 +21,9 @@ const convertStringToHTML = (htmlString) => {
 
 async function getRecipes() {
   try {
-    const response = await fetch(`${URL}/list?`, options);
+    const response = await fetch(`${URL}/list?from=0&to=6`, options);
     const result = await response.json();
-    console.log(JSON.stringify(result.results));
+    return result.results;
   } catch (error) {
     console.error(error);
   }
@@ -38,6 +37,7 @@ async function getRecipesBySearch(searchValue) {
       options
     );
     const result = await response.json();
+    console.log(result.results);
     return result.results;
   } catch (error) {
     console.error(error);
@@ -50,6 +50,8 @@ form.addEventListener("submit", async (e) => {
   if (!searchBar.value) return;
 
   const data = await getRecipesBySearch(searchBar.value);
+
+  recipeList.innerHTML = "";
 
   data.forEach((recipe) => {
     const recipeConverted = `
@@ -75,3 +77,35 @@ form.addEventListener("submit", async (e) => {
     );
   });
 });
+
+const fetchData = async () => {
+  const data = await getRecipes();
+
+  recipeList.innerHTML = "";
+
+  data.forEach((recipe) => {
+    const recipeConverted = `
+        <li class="recipe__details">
+        <div>
+          <img
+            src="${recipe.thumbnail_url}"
+            alt=""
+          />
+        </div>
+        <div class="recipe__infor">
+          <div>
+            <h3>${recipe.name}</h3>
+            <p>${recipe.description}</p>
+          </div>
+          <a href="/detail-page.html?id=${recipe.id}">View Detail</a>
+        </div>
+      </li>
+    `;
+    recipeList.insertAdjacentElement(
+      "afterbegin",
+      convertStringToHTML(recipeConverted)
+    );
+  });
+};
+
+fetchData();
