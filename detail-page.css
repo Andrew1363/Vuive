@@ -112,3 +112,10 @@ a {
     display: flex;
     flex-direction: column;
 }
+
+.videos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset;
+}

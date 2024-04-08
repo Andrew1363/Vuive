@@ -197,6 +197,12 @@ const fetchData = async () => {
       <h3></h3>
       <a href=""></a>
     </div>
+    <div class="videos">
+        <video width="800" controls>
+          <source src="${data.original_video_url}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
   </div>    `;
 
     body.insertAdjacentElement(
