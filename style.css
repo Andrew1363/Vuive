@@ -17,18 +17,19 @@ header {
   padding: 20px;
   text-align: left;
   border-style: solid;
-  background-image: url("/img/food.jpg");
+  background-image: url("/image/background_footer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 header h1 {
-  font-size: 24px;
+  font-size: 45px;
   font-weight: bold;
 }
 
 header p {
   font-size: 16px;
+  padding-top: 5px;
 }
 
 main {
@@ -37,7 +38,7 @@ main {
 }
 
 .tim-kiem {
-  border: 1px solid #ccc;
+  border: 1px solid #f4e9ce;
   padding: 10px;
   background-color: #f4e9ce;
 }
@@ -45,29 +46,32 @@ main {
 .tim-kiem form {
   display: flex;
   align-items: center;
+  position: absolute;
+  right: 15px;
 }
 
 .tim-kiem form input {
-  width: 500px;
+  width: 380px;
   padding: 10px;
   border: 1px solid #ccc;
 }
 
 .tim-kiem form select {
-  padding: 10px;
+  width: 80px;
+  padding: 9.9px;
   border: 1px solid #ccc;
 }
 
 .tim-kiem form button {
-  padding: 10px;
+  padding: 9.8px;
   background-color: #ff6600;
   color: #fff;
   border: 1px solid #ff6600;
 }
 
 .danh-muc {
-  border: 1px solid #ccc;
-  padding: 10px;
+  border: 1px solid #f4e9ce;
+  padding: 40px;
   background-color: #f4e9ce;
 }
 
@@ -77,6 +81,7 @@ main {
 }
 
 .danh-muc ul li {
+  padding-top: 10px;
   display: inline-block;
   margin-right: 10px;
 }
@@ -87,7 +92,7 @@ main {
 }
 
 .mon-an {
-  border: 1px solid #ccc;
+  border: 1px solid #f4e9ce;
   padding: 10px;
   background-color: #f4e9ce;
 }

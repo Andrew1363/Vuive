@@ -9,21 +9,21 @@
   </head>
   <body>
     <header>
-      <h1>Food News</h1>
+      <h1>Recipe Food</h1>
       <p>Chia sẻ công thức nấu ăn</p>
     </header>
 
     <main>
       <section class="tim-kiem">
         <form class="form">
-          <input type="text" placeholder="Tìm kiếm món ăn" class="search_bar" />
+          <input type="text" placeholder="Search food..." class="search_bar" />
           <select name="loai-mon-an">
-            <option value="tat-ca">Tất cả</option>
-            <option value="mon-khai-vi">Món khai vị</option>
-            <option value="mon-chinh">Món chính</option>
-            <option value="mon-trang-mieng">Món tráng miệng</option>
+            <option value="tat-ca">All</option>
+            <option value="mon-khai-vi">Appetizer</option>
+            <option value="mon-chinh">Main dishes</option>
+            <option value="mon-trang-mieng">Desserts</option>
           </select>
-          <button type="submit" class="btnSearch">Tìm kiếm</button>
+          <button type="submit" class="btnSearch">Search</button>
         </form>
       </section>
 
@@ -39,7 +39,7 @@
       </section>
 
       <section class="mon-an">
-        <h2>Món ăn mới nhất</h2>
+        <h1 style="padding-bottom: 15px; font-size: 35px;">New Food Today</h1>
         <ul class="recipe__list">
           <li class="recipe__details">
             <div>
@@ -51,7 +51,7 @@
             <div class="recipe__infor">
               <div>
                 <h3>${data.name}</h3>
-                <p>${data.description}</p>
+                <!--<p>${data.description}</p>--> 
               </div>
               <a href="#">View Detail</a>
             </div>
