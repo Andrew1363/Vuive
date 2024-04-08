@@ -1,10 +1,12 @@
 body {
     box-sizing: border-box;
 }
+
 a {
     text-decoration: none;
     color: black;
 }
+
 .main {
     width: 1180px;
     margin-left: auto;
@@ -41,16 +43,19 @@ a {
 }
 
 .steak {
-    height: 330px;
+    height: 400px;
+    width: 550px;
+    border-radius: 10px;
 }
 
 /* content */
 
 .content {
     display: flex;
-    padding-top: 60px;
-    column-gap: 50px;
+    padding-top: 25px;
+    column-gap: 30px;
     align-items: center;
+    grid-template-columns: 50% 50%;
 }
 
 .rate-food {
@@ -103,7 +108,6 @@ a {
 .many-item {
     display: flex;
     column-gap: 10px;
-
 }
 
 .items {
@@ -111,11 +115,11 @@ a {
     background: #72aeb240;
     display: flex;
     flex-direction: column;
+    border-radius: 10px
 }
 
 .videos{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: inset;
 }

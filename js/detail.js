@@ -43,7 +43,7 @@ const fetchData = async () => {
     const instructionList = data.instructions.map((instruction, index) => {
       return `
         <div>
-          <h3>Step ${index + 1}</h3>
+          <h3 style="padding-left: 20px;">Step ${index + 1}</h3>
           <p>${instruction.display_text}</p>
         </div>
       `
@@ -59,7 +59,7 @@ const fetchData = async () => {
   <div class="main">
     <div class="header">
       <div class="title">
-        <span class="good">good</span>
+        <span class="good">Recipe</span>
         <span class="food">Food</span>
       </div>
       <div style="display: flex; align-items: center">
@@ -78,9 +78,11 @@ const fetchData = async () => {
       </div>
     </div>
     <div class="content">
-      <img src="${data.thumbnail_url}" alt="" class="steak" />
+      <div class="image" style="padding-top: 30px;">
+          <img src="${data.thumbnail_url}" alt="" class="steak" />
+      </div>
       <div class="rate-food">
-        <h2>${data.name}</h2>
+        <h1>${data.name}</h1>
         <a href="">${data.credits[0].name || ""}</a>
         <div class="rate-comment">
           <div class="detail-rate">
@@ -101,9 +103,10 @@ const fetchData = async () => {
           <div class="more-detail">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="w-6 h-6" style="
-                                    height: 20px;
+                                    height: 30px;
                                     color: white;
                                     background-color: #0c5f5f;
+                                    border-radius: 10px;
                                 ">
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -116,9 +119,10 @@ const fetchData = async () => {
           <div class="more-detail">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="w-6 h-6" style="
-                                    height: 20px;
+                                    height: 30px;
                                     color: white;
                                     background-color: #0c5f5f;
+                                    border-radius: 10px;
                                 ">
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -131,67 +135,68 @@ const fetchData = async () => {
           <div class="more-detail">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="w-6 h-6" style="
-                                    height: 20px;
+                                    height: 30px;
                                     color: white;
                                     background-color: #0c5f5f;
+                                    border-radius: 10px;
                                 ">
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
             </svg>
             <div class="desc">
-              <span>Serves ${data.num_servings}</span>
+              <span>Serves: ${data.num_servings}</span>
 
             </div>
           </div>
 
         </div>
         <p>${data.description}</p>
-        <h3>Nutrition: Per serving</h3>
+        <h4>Nutrition: Per serving</h4>
         <div class="many-item">
           <div class="items">
             <span>kcal</span>
             <span>402</span>
           </div>
           <div class="items">
-            <span>kcal</span>
-            <span>402</span>
+            <span>fat</span>
+            <span>40g</span>
           </div>
           <div class="items">
-            <span>kcal</span>
-            <span>402</span>
+            <span>saturates</span>
+            <span>2g</span>
           </div>
           <div class="items">
-            <span>kcal</span>
-            <span>402</span>
+            <span>carbs</span>
+            <span>11g</span>
           </div>
           <div class="items">
-            <span>kcal</span>
-            <span>402</span>
+            <span>sugars</span>
+            <span>40g</span>
           </div>
           <div class="items">
-            <span>kcal</span>
-            <span>402</span>
+            <span>fibre</span>
+            <span>0g</span>
           </div>
           <div class="items">
-            <span>kcal</span>
-            <span>402</span>
+            <span>protein</span>
+            <span>45g</span>
           </div>
           <div class="items">
-            <span>kcal</span>
-            <span>402</span>
+            <span>salt</span>
+            <span>0.3g</span>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="description" style="display: grid; grid-template-columns: auto 1fr 1fr; column-gap: 20px;">
+    <div class="description" style="display: grid; grid-template-columns: 30% 70%; column-gap: 20px; padding-top:20px">
       <div style="display: flex; flex-direction: column;">
-        <h3>Ingredients</h3>
+        <h2 style="text-align: center;">Ingredients</h2>
            ${ingredientList}
        
       </div>
       <div>
-        <h3>Method</h3>
+        <h2 style="text-align: center;">Method</h2>
         ${instructionList}
       </div>
       <h3></h3>
